@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>aspnet_core_dotnet_core</RootNamespace>
+    <RootNamespace>AppServer</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
