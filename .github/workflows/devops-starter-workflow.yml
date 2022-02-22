@@ -40,7 +40,7 @@ jobs:
         cd Application
         dotnet restore
         dotnet build --configuration Release
-        dotnet test aspnet-core-dotnet-core.UnitTests/aspnet-core-dotnet-core.UnitTests.csproj
+        dotnet test Domain.UnitTests/Domain.UnitTests.csproj
         dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
 
     - name: Archive Application
@@ -126,16 +126,3 @@ jobs:
       with:
         dotnet-version: ${{ env.DOTNET_VERSION }} 
 
-    - name: update web app url in Run Settings
-      shell: powershell
-      run: |
-        cd Application\aspnet-core-dotnet-core.FunctionalTests
-        [xml]$runSetting = Get-Content functionalTests.runsettings
-        $runSetting.RunSettings.TestRunParameters.ChildNodes.Item(0).value = 'https://${{ env.AZURE_WEBAPP_NAME }}.azurewebsites.net/'
-        $runSetting.Save("$(pwd)/functionalTests.runsettings")
-
-    - name: Run tests
-      continue-on-error: false
-      run: |
-        cd Application\aspnet-core-dotnet-core.FunctionalTests
-        dotnet test aspnet-core-dotnet-core.FunctionalTests.csproj -s functionalTests.runsettings
