@@ -40,7 +40,7 @@ jobs:
         cd Application
         dotnet restore
         dotnet build --configuration Release
-        dotnet test Domain.UnitTests/Domain.UnitTests.csproj
+        dotnet test Domain.UnitTests/Domain.Tests.csproj
         dotnet publish -c Release -o '${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build'
 
     - name: Archive Application
