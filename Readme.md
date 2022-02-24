@@ -7,7 +7,7 @@
 
 Telstra Purple Toy Robot Coding Assignment
 
-Uses C# Winforms built on .Net Core 3.1.0 to create a library that accepts a set of commands for the robot and responds based on a set of rules
+Uses C# Winforms Application built on .Net Core 3.1.0 that uses a library that accepts a set of commands for the robot and responds based on a set of rules
 
 ## License:
 See [LICENSE](LICENSE).
