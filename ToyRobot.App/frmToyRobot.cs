@@ -27,7 +27,7 @@ namespace ToyRobot.App
 		{
 			pbStart.Image = Properties.Resources.Robot_Start;
 			pbStart.SizeMode = PictureBoxSizeMode.StretchImage;
-			cmbDirection.Items.Add(String.Empty);
+			cmbDirection.Items.Add(string.Empty);
 			foreach (Direction direction in Enum.GetValues(typeof(Direction)))
 			{
 				cmbDirection.Items.Add(direction);
@@ -47,7 +47,7 @@ namespace ToyRobot.App
 
 			// If the operation fails show error
 			if (result.Status != DomainOperationStatus.Success)
-				MessageBox.Show(String.Join(Environment.NewLine, result.DomainErrors.Select(x => x.Message)));
+				MessageBox.Show(string.Join(Environment.NewLine, result.DomainErrors.Select(x => x.Message)));
 			else
 				// if the Domain Operation succeeds place the robot on the table
 				PlaceRobotOnMatrix(result.Value);

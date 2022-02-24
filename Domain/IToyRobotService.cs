@@ -12,7 +12,7 @@ namespace Domain
         DomainOperationResult<RobotState> PlaceRobot(PlaceCommandDto commandDto);
 
         /// <summary>
-        ///     Executes the Command taht is passed in
+        ///     Executes the Command that is passed in
         /// </summary>
         /// <param name="command"></param>
         /// <returns></returns>
