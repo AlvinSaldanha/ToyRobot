@@ -1,11 +1,13 @@
 | Language | Framework | Platform | Author |
 | -------- | -------- |--------|--------|
-| ASP.NET Core | .NET Core 3.1 | Azure Web App, Virtual Machines |
+| C# | .NET Core 3.1 | Winforms, Class Library | Alvin Saldanha
 
 
-# ASP.NET Core MVC application 
+# C# 
 
-Sample ASP.NET Core MVC application built using Visual Studio 2019.
+Telstra Purple Toy Robot Coding Assignment
+
+Uses C# Winforms built on .Net Core 3.1.0 to create a library that accepts a set of commands for the robot and responds based on a set of rules
 
 ## License:
 See [LICENSE](LICENSE).
