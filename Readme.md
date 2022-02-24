@@ -9,7 +9,7 @@ Uses C# Winforms Application built on .Net Core 3.1.0 that uses a library that a
 
 The solution `ToyRobot.sln` contains 3 projects
   * ToyRobot.App (Winforms application)
-  * Domain (Domain Layer that contains the busimess logic for the Robot's movement)
+  * Domain (Domain Layer that contains the business logic for the Robot's movement)
   * Domain.XUnitTests (XUnit tests)
 
 
