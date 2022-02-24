@@ -3,9 +3,7 @@
 | C# | .NET Core 3.1 | Winforms, Class Library | Alvin Saldanha
 
 
-# C# 
-
-Telstra Purple Toy Robot Coding Assignment
+# Telstra Purple Robot Coding Assignment
 
 Uses C# Winforms Application built on .Net Core 3.1.0 that uses a library that accepts a set of commands for the robot and responds based on a set of rules
 
