@@ -9,13 +9,12 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       
     - uses: actions/checkout@v2
     - name: Setup .NET
-      working-directory: ./Application
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
