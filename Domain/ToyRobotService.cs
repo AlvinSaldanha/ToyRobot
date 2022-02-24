@@ -116,7 +116,7 @@ namespace Domain
 				return DomainOperationResult.Error("The command object is Empty");
 
 			if (robotState?.Direction.HasValue != true && !commandDto.Direction.HasValue)
-				return DomainOperationResult.Error("Please enter the direction when executing the initial Place Command");
+				return DomainOperationResult.Error("Please enter the direction when executing the 'Place' command for the first time");
 
 			if (commandDto.X < 0 || commandDto.X > 5)
 				return DomainOperationResult.Error("The value of X Coordinate should be between 0 and 5");
