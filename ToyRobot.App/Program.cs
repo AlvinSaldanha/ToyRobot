@@ -1,9 +1,6 @@
 using Domain;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ToyRobot.App
@@ -37,13 +34,15 @@ namespace ToyRobot.App
 			MessageBox.Show(e.Message);
 		}
 
+		/// <summary>
+		///		Registering the services to the DI container
+		/// </summary>
 		static void Config()
 		{
 			ServiceProvider = new ServiceCollection()
 				.AddSingleton<IToyRobotService, ToyRobotService>()
 				.BuildServiceProvider();
 		}
-
 
 		static void ShutDown()
 		{

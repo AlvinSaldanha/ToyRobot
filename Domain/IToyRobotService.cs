@@ -10,7 +10,17 @@ namespace Domain
         /// <param name="commandDto">Direction is mandatory on the first place. Not on subsequent places</param>
         /// <returns></returns>
         DomainOperationResult<RobotState> PlaceRobot(PlaceCommandDto commandDto);
+
+        /// <summary>
+        ///     Executes the Command taht is passed in
+        /// </summary>
+        /// <param name="command"></param>
+        /// <returns></returns>
         DomainOperationResult<RobotState> ExecuteCommand(Command command);
+        
+        /// <summary>
+        ///     Resets the robot's state to initial state
+        /// </summary>
         void ResetRobotState();
     }
 }

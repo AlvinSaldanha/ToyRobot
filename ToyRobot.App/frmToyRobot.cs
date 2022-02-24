@@ -18,11 +18,9 @@ namespace ToyRobot.App
 		private readonly IToyRobotService _toyRobotService;
 		public frmToyRobot(ServiceProvider serviceProvider)
 		{
-
 			InitializeComponent();
 			_toyRobotService = serviceProvider.GetRequiredService<IToyRobotService>();
 			InitialiseRobot();
-
 		}
 
 		public void InitialiseRobot()
@@ -34,12 +32,10 @@ namespace ToyRobot.App
 			{
 				cmbDirection.Items.Add(direction);
 			}
-
 		}
 
 		private void btnPlace_Click(object sender, EventArgs e)
 		{
-
 			Direction? direction = string.IsNullOrEmpty(cmbDirection.Text) ? null as Direction?
 				: (Direction)Enum.Parse(typeof(Direction), cmbDirection.Text);
 
@@ -94,7 +90,6 @@ namespace ToyRobot.App
 
 		private DomainOperationResult<RobotState> ExecuteCommand(Command command)
 		{
-			
 			var result = _toyRobotService.ExecuteCommand(command);
 
 			lblOutputLabel.Visible = false;

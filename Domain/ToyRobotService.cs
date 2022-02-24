@@ -9,7 +9,6 @@ namespace Domain
 	{
 		private static RobotState robotState;
 
-
 		public DomainOperationResult<RobotState> PlaceRobot(PlaceCommandDto commandDto)
 		{
 			var result = ValidatePlaceCommand(commandDto);
@@ -22,7 +21,6 @@ namespace Domain
 			robotState.Direction = commandDto.Direction ?? robotState.Direction;
 			return DomainOperationResult.Success(robotState);
 		}
-
 
 		public DomainOperationResult<RobotState> ExecuteCommand(Command command)
 		{
@@ -82,7 +80,6 @@ namespace Domain
 			return DomainOperationResult.Success(robotState);
 		}
 
-	
 		private DomainOperationResult<Direction> GetDirection(Command command)
 		{
 			if (command != Command.Left && command != Command.Right)
